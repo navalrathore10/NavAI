@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ------------------------------------------------------------------   Color Theme Variables */
+:root {
+  --b3-color: #3490dc;
+  --d17-color: #171717;
+  --d18-color: #181818;
+  --d19-color: #191919;
+  --d20-color: #202020;
+  --d24-color: #242424;
+  --le3-color: #e3e3e3;
+  --y3-color: #ffed4a;
+  --background-color: #f8fafc;
+  --darkop10-color: #0000001a;
+  --darkop20-color: #00000033;
+  --darkop40-color: #00000066;
+  --darkop60-color: #00000099;
+  --darkop80-color: #000000cc;
+  --lightop10-color: #ffffff1a;
+  --lightop20-color: #ffffff33;
+  --lightop40-color: #ffffff66;
+  --lightop60-color: #ffffff99;
+  --lightop80-color: #ffffffcc;
+  --pink-color: #ff5de9cc;
+  --darkpink-color: #69008c;
+
+  
+  --prim-color: white;
+  --dark-color: gray;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+.text-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.text-railway {
+  font-family: "Raleway", serif;
+}
+
+.text-josef {
+  font-family: "Josefin Sans", serif;
+}
