@@ -29,6 +29,9 @@ export default {
         prim: 'var(--prim-color)',
         dark: 'var(--dark-color)'
       },
+      height: {
+        'screen-dvh': '100dvh',
+      },
     },
   },
   plugins: [],
