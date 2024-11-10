@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 function App() {
   return (
     <>
-      <motion.div layout className=' flex flex-grow max-h-screen-dvh'
+      <motion.div layout className=' flex flex-grow h-screen-dvh'
         style={{
           background: '#03001e', /* fallback for old browsers */
           backgroundImage: '-webkit-linear-gradient(to left, #fdeff9, #ff81dd, #7303c0, #03001e)', /* Chrome 10-25, Safari 5.1-6 */
