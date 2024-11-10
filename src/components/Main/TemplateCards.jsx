@@ -13,27 +13,6 @@ function TemplateCards({ prompt, icon }) {
                 </div>
             </div>
         </div>
-
-
-        // <div className="relative p-6 rounded-md overflow-hidden shadow-lg border border-gray-200 ">
-        //     {/* Gradient Overlay */}
-        //     <div className="absolute inset-0  pointer-events-none"></div>
-
-        //     {/* Card Content */}
-        //     <div className="relative z-10 flex flex-col items-center text-center text-white space-y-3">
-        //         {/* Logo Icon */}
-        //         <FaReact className="text-4xl text-white opacity-80" />
-
-        //         {/* Title */}
-        //         <h3 className="text-lg font-semibold">Welcome to React</h3>
-
-        //         {/* Description */}
-        //         <p className="text-sm opacity-80">
-        //             Explore the beauty of modern UI with a gradient glass effect.
-        //         </p>
-        //     </div>
-        // </div>
-
     )
 }
 
