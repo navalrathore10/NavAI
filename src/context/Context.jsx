@@ -12,6 +12,10 @@ const ContextProvider = (props) => {
     const [loading, setLoading] = useState(false);
     const [resultData, setResultData] = useState('');
 
+    const delayPara = (index, nextWord) => {
+
+    }
+
     const onSent = async (input) => {
         // console.log('hello');
 
@@ -19,9 +23,23 @@ const ContextProvider = (props) => {
         setLoading(true);
         setShowresult(true);
         setRecentPrompt(input);
-
         const response = await run(input);
-        setResultData(response);
+        let formattedResponse = response
+            .split("\n\n") // Split paragraphs
+            .map(paragraph => {
+                return paragraph
+                    .split("**")
+                    .map((text, index) => (index % 2 === 1 ? `<b>${text}</b>` : text))
+                    .join("") // Apply bolding for **text**
+                    .split("* ")
+                    .map((text, index) => (index === 0 ? text : `<li>${text}</li>`))
+                    .join("") // Apply bullet point formatting
+            })
+            .map(paragraph => `<p>${paragraph}</p>`)
+            .join(""); // Wrap each paragraph in <p> tags
+
+        // Render formatted HTML in React
+        setResultData(formattedResponse);
         setLoading(false);
         setInput('');
 

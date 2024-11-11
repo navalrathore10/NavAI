@@ -71,3 +71,30 @@
   display: none;
   /* for Chrome, Safari, and Opera */
 }
+
+@keyframes loader-animation {
+  0% {
+    background-position: -800px 0px;
+  }
+
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+.animation-loader {
+  background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  background-size: 800px 50px;
+  animation: loader-animation 3s infinite linear;
+}
+
+
+/* _________________________________________ TExt reply Css */
+
+.result-message b {
+  color: #6c02a9;
+}
+
+.result-message br {
+  margin-bottom: 0.5rem;
+}
