@@ -104,16 +104,16 @@ const ChatPage = () => {
                         </>
                         :
                         <>
-                            <div className="result h-[66vh] max-h-[66vh] p-6 bg-white rounded-lg overflow-y-auto scrollbar-hide flex flex-col gap-5 justify-start border-red-400">
+                            <div className="result h-[66vh] max-h-[66vh] lg:p-6 bg-white rounded-lg overflow-y-auto scrollbar-hide flex flex-col gap-5 justify-start border-red-400">
                                 <div className="result-title flex gap-5 items-start">
                                     <img
                                         src="https://images.unsplash.com/profile-1661966219494-f87fcbcf7937image?bg=fff&crop=faces&dpr=1&h=150&w=150&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
                                         alt=""
                                         className="min-w-9 h-9 rounded-full overflow-hidden"
                                     />
-                                    <p className="text-sm text-black">{recentPrompt}</p>
+                                    <p className="text-sm pt-2 text-black">{recentPrompt}</p>
                                 </div>
-                                <div className="result_data flex gap-5 flex-grow items-start">
+                                <div className="result_data flex lg:flex-row flex-col lg:gap-5 flex-grow items-start">
                                     <div className="gemini_icon text-3xl min-w-9 h-9 flex justify-center items-center text-gray-400">
                                         {/* <SiGooglegemini /> */}
                                         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 8.016A8.522 8.522 0 008.016 16h-.032A8.521 8.521 0 000 8.016v-.032A8.521 8.521 0 007.984 0h.032A8.522 8.522 0 0016 7.984v.032z" fill="url(#prefix__paint0_radial_980_20147)" /><defs><radialGradient id="prefix__paint0_radial_980_20147" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(16.1326 5.4553 -43.70045 129.2322 1.588 6.503)"><stop offset=".067" stop-color="#9168C0" /><stop offset=".343" stop-color="#5684D1" /><stop offset=".672" stop-color="#1BA1E3" /></radialGradient></defs></svg>
@@ -121,8 +121,8 @@ const ChatPage = () => {
                                     {loading ?
                                         <MessageLoader />
                                         :
-                                        <div className="text-sm text-black text-justify leading-7
-                                            flex flex-col gap-[1rem] p-[1rem]">
+                                        <div className="text-sm text-black text-justify leading-5 lg:leading-7
+                                            flex flex-col gap-[1rem] p-[1rem] pt-0">
                                             <p className='result-message' dangerouslySetInnerHTML={{ __html: resultData }} />
                                         </div>
                                     }
