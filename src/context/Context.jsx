@@ -13,7 +13,9 @@ const ContextProvider = (props) => {
     const [resultData, setResultData] = useState('');
 
     const delayPara = (index, nextWord) => {
-
+        setTimeout(function () {
+            setResultData(prev => prev + nextWord);
+        }, 75 * index)
     }
 
     const onSent = async (input) => {
@@ -39,7 +41,14 @@ const ContextProvider = (props) => {
             .join(""); // Wrap each paragraph in <p> tags
 
         // Render formatted HTML in React
-        setResultData(formattedResponse);
+        // setResultData(formattedResponse);
+        let newResponseArray = formattedResponse.split(" ");
+        for(let i=0;i<newResponseArray.length;i++)
+        {
+            const nextWord = newResponseArray[i];
+            delayPara(i,nextWord+" ");
+        }
+
         setLoading(false);
         setInput('');
 
