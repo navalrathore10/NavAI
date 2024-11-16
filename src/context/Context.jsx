@@ -25,6 +25,7 @@ const ContextProvider = (props) => {
         setLoading(true);
         setShowresult(true);
         setRecentPrompt(input);
+        setPrevPrompts(prev=>[...prev,input]);
         const response = await run(input);
         let formattedResponse = response
             .split("\n\n") // Split paragraphs
